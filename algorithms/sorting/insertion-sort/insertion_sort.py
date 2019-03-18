@@ -1,6 +1,8 @@
-# Insertion sort maintains a sorted sublist in the lower positions of the list.
-# Each new item is then inserted into the previous list in its sorted position.
-# It has a time complexity of O(n^2)
+"""
+- Insertion sort maintains a sorted sublist in the lower positions of the list.
+- Each new item is then inserted into the previous list in its sorted position.
+- It has a time complexity of O(n^2)
+"""
 
 
 def insertion_sort(a_list):
