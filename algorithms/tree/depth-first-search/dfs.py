@@ -40,6 +40,7 @@ def depth_first_search(graph, start):
     stack = [start]
 
     while stack:
+        # get the element at the top of the stack
         node = stack.pop()
         
         if node not in visited:
@@ -50,6 +51,7 @@ def depth_first_search(graph, start):
             neighbors = graph[node]
 
             # for all it's unvisited neighbors, add them to the stack
+            # each of them will be visited later
             for neighbor in neighbors:
                 if neighbor not in visited:
                     stack.append(neighbor)

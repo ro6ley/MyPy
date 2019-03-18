@@ -40,7 +40,7 @@ def bfs_traverse_graph(graph, start):
 
     # keep looping while queue still has nodes to be checked
     while queue:
-        # get the first node
+        # get the node at the start of the queue
         node = queue.popleft()
 
         if node not in visited:
