@@ -1,6 +1,8 @@
-# Bubble sort makes multiple passess through a list comparing adjacent values
-# and exchanegs those that are out of order.
-# In each round, the next largest number is placed in it's correct position
+"""
+- Bubble sort makes multiple passess through a list comparing adjacent values
+  and exchanegs those that are out of order.
+- In each round, the next largest number is placed in it's correct position
+"""
 
 
 def bubble_sort(a_list):
