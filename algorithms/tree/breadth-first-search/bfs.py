@@ -66,7 +66,6 @@ def bfs_shortest_path(graph, start, goal):
 
     # keep track of the nodes to be explored, starting with the starting node
     # provided
-    # queue = [[start]]
     queue = deque([[start]])
 
     if start == goal:
