@@ -18,19 +18,16 @@ NB: For an element `a` in the array at the index a:
 """
 
 
-def heapsort(alist):
-    build_max_heap(alist)
-    for i in range(len(alist) - 1, 0, -1):
-        alist[0], alist[i] = alist[i], alist[0]
-        max_heapify(alist, index=0, size=i)
-
-
 def parent(i):
+    """
+    Return an element's parent in relation to a binary tree
+    """
     return (i - 1)//2
 
 
 def build_max_heap(alist):
     length = len(alist)
+    # get the parent of the starting element
     start = parent(length - 1)
     while start >= 0:
         max_heapify(alist, index=start, size=length)
@@ -38,8 +35,14 @@ def build_max_heap(alist):
 
 
 def max_heapify(alist, index, size):
+    # initialize largest as root
+    largest = index
+    # left child of current element
     l = 2 * index + 1
+    # right child of current element
     r = 2 * index + 2
+    # if the index of the left child is within the list and its position is
+    # is greater than the largest which should be at the start, make it the largest
     if (l < size and alist[l] > alist[index]):
         largest = l
     else:
@@ -48,7 +51,17 @@ def max_heapify(alist, index, size):
         largest = r
     if (largest != index):
         alist[largest], alist[index] = alist[index], alist[largest]
+        # repeat using the largest element as the starting point
         max_heapify(alist, largest, size)
+
+
+def heapsort(alist):
+    build_max_heap(alist)
+    # loop in reverse from the end of the list to the start
+    for i in range(len(alist) - 1, 0, -1):
+        # swap the current element to the first position
+        alist[0], alist[i] = alist[i], alist[0]
+        max_heapify(alist, index=0, size=i)
 
 
 a_list = [12, 11, 13, 5, 6, 7]
