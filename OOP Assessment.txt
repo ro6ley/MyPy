@@ -1,0 +1,12 @@
+Network - regCustomers - checkRegistration(), sendPayment(), verifyMyNumberOrNot(), transferFunds()
+Saf(Network) - verifyMyNumberOrNot(), transferFunds()
+Airtel(Network)
+Customers - regNetwork, airtimeBal, moneyBal - initiateTransferMethods() 
+
+A = Cust(Airtel, 30, 1000)
+B = Cust(Safaricom, 40, 1000)
+
+A - sendPayment(money) - B
+
+B - verifyMyNumberOrNot - Airtel.checkRegistration(A) - transferFunds()
+

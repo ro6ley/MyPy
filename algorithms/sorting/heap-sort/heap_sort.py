@@ -56,6 +56,10 @@ def max_heapify(alist, index, size):
 
 
 def heapsort(alist):
+    """
+    Build a max heap,
+    Extract the largest element and build the max heap again
+    """
     build_max_heap(alist)
     # loop in reverse from the end of the list to the start
     for i in range(len(alist) - 1, 0, -1):
